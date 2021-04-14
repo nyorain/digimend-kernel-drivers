@@ -1233,7 +1233,7 @@ int uclogic_params_init(struct uclogic_params *params,
 		break;
 	case VID_PID(USB_VENDOR_ID_UGEE,
 		     USB_DEVICE_ID_UGEE_XPPEN_TABLET_DECO01_V2):
-		hid_err("deco01v2 bInterfaceNumber %d\n", (int) bInterfaceNumber);
+		hid_err(hdev, "deco01v2 bInterfaceNumber %d\n", (int) bInterfaceNumber);
 		switch (bInterfaceNumber) {
 		case 0: // Keyboard
 			rc = uclogic_params_frame_init_with_desc(
@@ -1254,7 +1254,7 @@ int uclogic_params_init(struct uclogic_params *params,
 				goto cleanup;
 			break;
 		case 2: //What is this interface?
-			hid_err("deco01v2 unknown interface, 2\n");
+			hid_err(hdev, "deco01v2 unknown interface, 2\n");
 			uclogic_params_init_invalid(&p);
 			break;
 		}
