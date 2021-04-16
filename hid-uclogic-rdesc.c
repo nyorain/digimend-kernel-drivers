@@ -979,10 +979,12 @@ const size_t uclogic_rdesc_xppen_deco01_frame_size =
 
 __u8 uclogic_rdesc_xppen_deco01v2_fixed0_arr[] = {
 	0x05, 0x01,         /*  Usage Page (Desktop),               */
-	0x09, 0x06,         /*  Usage (Keyboard),                   */
+	0x09, 0x07,         /*  Usage (Keypad),                   */
 	0xA1, 0x01,         /*  Collection (Application),           */
 	0x85, 0x06,         /*      Report ID (6),                  */
-	0x05, 0x07,         /*      Usage Page (Keyboard),          */
+	// 0x05, 0x07,         /*      Usage Page (Keyboard),          */
+	0x05, 0x0D, /*      Usage Page (Digitizer),         */
+	0x09, 0x39, /*      Usage (Tablet Function Keys),   */
 	0x19, 0xE0,         /*      Usage Minimum (KB Leftcontrol), */
 	0x29, 0xE7,         /*      Usage Maximum (KB Right GUI),   */
 	0x15, 0x00,         /*      Logical Minimum (0),            */
